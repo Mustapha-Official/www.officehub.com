@@ -1,0 +1,509 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
+}
+
+/* STICKY HEADER */
+
+.header{
+position: sticky;
+font-weight: bolder;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+z-index: 1000;
+}
+
+.logo img{
+width: 65px;
+height: 70px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.nav-links{
+display: flex;
+list-style: none;
+}
+
+.nav-links li{
+margin: 0 15px;
+}
+
+.nav-links a{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.btn{
+background: white;
+color: #2b579a;
+padding: 10px 18px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+height: 90vh;
+background-image: linear-gradient(#00000096,#0000009C), url(herobg.png);
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+position: relative;
+}
+
+.hero-content{
+max-width: 600px;
+}
+
+.hero h1{
+font-size: 45px;
+margin-bottom: 15px;
+}
+
+.hero p{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.hero-btn{
+background: #ffb400;
+color: #282829;
+padding: 12px 28px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+
+
+/* WAVE ANIMATION */
+
+.wave{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 120px;
+background-image: url(hero.png);
+background-size: cover;
+background-repeat: no-repeat;
+animation: wave 2s linear infinite;
+}
+
+@keyframes wave{
+0%{background-position-x: 0;}
+100%{background-position-x: 1000px;}
+}
+
+
+/* FOOTER */
+
+footer{
+background: #1f3f6d;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+.hero-content p, .dashboard-text p, .course-box p, .hero p{
+font-size: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 768px){
+
+body{
+font-size: 18px;
+}
+
+.hero-content p, .dashboard-text p, .course-box p, .hero p{
+font-size: 18px;
+}
+
+.header{
+flex-direction: column;
+}
+
+.nav-links{
+flex-direction: column;
+margin-top: 6px;
+}
+
+.nav-links li{
+margin: 8px 0;
+}
+
+.hero h1{
+font-size: 32px;
+}
+
+.dashboard-courses{
+    flex-direction: column;
+}
+
+.course-layout{
+grid-template-columns: 1fr;
+}
+
+}
+
+
+/*DASHBOARD SECTION STYLING*/
+/* DASHBOARD HERO */
+
+.dashboard-hero{
+height: 60vh;
+background-image: linear-gradient(#000000AB,#000000A8), url(hero.png);
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 20px;
+animation: fadeIn 2s ease-in;
+}
+
+.dashboard-text{
+max-width: 700px;
+}
+
+.dashboard-text h1{
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.dashboard-text p{
+font-size: 18px;
+line-height: 1.6;
+}
+
+
+/* COURSES GRID */
+
+.dashboard-courses{
+display: grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap: 30px;
+padding: 60px;
+background:#f4f6f8;
+border-radius: 20px;
+}
+
+
+/* COURSE BOX */
+
+.course-box{
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+transition: 0.5s;
+}
+
+.course-box:hover{
+transform: translateY(-15px);
+background-color: #3B3C40;
+color: #ffffff;
+}
+
+.course-box h2{
+margin-bottom: 15px;
+}
+
+.course-box p{
+margin-bottom: 20px;
+}
+
+
+/* BUTTON */
+
+.course-btn{
+background: #E1E1E1;
+color: #0068C9;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+
+
+/* HERO ANIMATION */
+
+@keyframes fadeIn{
+
+from{
+opacity: 0;
+transform: translateY(30px);
+}
+
+to{
+opacity: 1;
+transform: translateY(0);
+}
+
+}
+
+
+/*COURSES PAGES STYLING SECTION*/
+.course-layout{
+display: grid;
+grid-template-columns: 260px 1fr;
+gap: 30px;
+padding: 20px;
+}
+
+.sidebar{
+background: #f4f6f8;
+padding: 20px;
+border-radius: 8px;
+}
+
+.sidebar ul{
+list-style: square;
+}
+
+.sidebar li{
+margin: 10px 0;
+}
+
+.lesson-content{
+background: white;
+padding: 45px;
+border-radius: 10px;
+box-shadow: 0 0 10px #000000;
+}
+
+.image-placeholder img{
+    width: 700px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-style: outset;
+}
+
+@media(max-width: 900px){
+.lesson-content{
+    padding: 20px;
+}
+
+.course-layout{
+grid-template-columns: 1fr;
+}
+
+.image-placeholder img {
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: outset;
+}
+
+.dashboard-courses{
+    flex-direction: column;
+}
+}
+
+
+/*PRACTICE SECTION STYLING*/
+.practice-hero{
+
+background: #2b579a;
+color: white;
+text-align: center;
+padding: 60px 20px;
+
+}
+
+.practice-section{
+padding: 40px;
+max-width: 900px;
+margin: auto;
+}
+
+h2{
+    
+    border-bottom: 2px solid #000000;
+    line-height: 1.5;
+}
+
+.practice-section h2{
+
+margin-bottom: 20px;
+
+}
+
+.practice-section ol{
+
+line-height: 1.8;
+
+}
+
+
+
+/*QUIZZES SECTION STYLING*/
+.quiz-container{
+
+text-align: center;
+padding: 50px;
+max-width: 700px;
+margin: auto;
+
+}
+
+#answers button{
+
+display: block;
+margin: 10px auto;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+background-color: #06B85F;
+
+}
+
+.quiz-btn{
+
+background-color: #0069FF;
+margin-top: 20px;
+padding: 5px 11px;
+color: #FFFFFF;
+font-weight: bold;
+
+}
+
+.progress-bar{
+
+width: 100%;
+background: #31C7FF;
+height: 12px;
+border-radius: 30px;
+margin: 20px 0;
+
+}
+
+#progress{
+
+width: 0%;
+height: 100%;
+background: #0A6A17;
+transition: 0.3s;
+border-radius: 5px;
+
+}
+
+.celebration{
+
+display: none;
+text-align: center;
+margin-top: 40px;
+font-size: 20px;
+
+}
+
+/* Flower Animation */
+
+.flower{
+
+position: fixed;
+top: -50px;
+font-size: 18px;
+animation: fall 2s linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{transform: translateY(50px)}
+100%{transform: translateY(100vh)}
+
+}
+
+
+
+/*CERTIFICATE SECTION PAGE STYLING*/
+.certificate-form{
+
+text-align: center;
+margin: 40px;
+
+}
+
+.certificate-form input{
+
+padding: 10px;
+margin: 10px;
+background: #97EDE6;
+color: #000;
+border-radius: 5px;
+
+}
+
+.certificate-form button{
+
+padding: 10px 20px;
+margin: 10px;
+background-color: #034074;
+color: #FFFFFF;
+
+}
+
+#certificate{
+
+width: 900px;
+margin: 40px auto;
+padding: 40px;
+text-align: center;
+border: 12px solid #0B7013;
+border-radius: 20px;
+background: linear-gradient(135deg,#FFFFFF,#A8EEFF);
+
+}
+
+.title{
+
+font-size: 40px;
+color: #8C0606;
+font-family: cursive;
+font-weight: bold;
+
+}
+
+#name{
+
+font-size: 35px;
+margin: 20px;
+color: #0002BF;
+font-family: cursive;
+
+}
+
+.cert-footer{
+
+display: flex;
+justify-content: space-between;
+margin-top: 60px;
+padding: 0 80px;
+
+}
+
+.signature{
+
+width: 150px;
+
+}

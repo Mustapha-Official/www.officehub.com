@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Microsoft Office Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header style="background-image: linear-gradient(350deg, #2B579A, #256969);" class="header">
+
+<div class="logo"><img src="author.jpg" alt="author" /></div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="dashboard.html">Courses</a></li>
+<li><a href="practice.html">Practice</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="quiz-container">
+
+<h1>Microsoft Office Master Quiz</h1>
+
+<p>Answer all 20 questions and test your knowledge, don't forget to take your certificate below after you completed the quiz.</p>
+
+<!-- SCORE -->
+
+<h3>Score: <span id="score">0</span>/20</h3>
+
+<!-- PROGRESS BAR -->
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+<h2 id="question"></h2>
+
+<div id="answers"></div>
+
+<p id="result"></p>
+
+<button onclick="nextQuestion()" class="quiz-btn">Next</button>
+
+
+</section>
+
+<!-- CELEBRATION -->
+
+<div id="celebration" class="celebration">
+<h2>🎉 Congratulations! You completed the quiz!</h2>
+<br />
+<a href="certificate.html" class="hero-btn">Take Your Certificate</a> <br /><br />
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
